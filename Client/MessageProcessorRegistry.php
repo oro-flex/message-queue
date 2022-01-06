@@ -14,7 +14,7 @@ class MessageProcessorRegistry extends ServiceLocator implements MessageProcesso
     /**
      * {@inheritdoc}
      */
-    public function get(string $id): MessageProcessorInterface
+    public function get($id): MessageProcessorInterface
     {
         if (!$id || !$this->has($id)) {
             return new NullMessageProcessor($id);

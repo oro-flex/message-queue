@@ -10,5 +10,5 @@ use Symfony\Contracts\Service\ServiceProviderInterface;
  */
 interface MessageProcessorRegistryInterface extends ServiceProviderInterface
 {
-    public function get(string $id): MessageProcessorInterface;
+    public function get($id): MessageProcessorInterface;
 }

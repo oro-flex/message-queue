@@ -2,7 +2,7 @@
 
 namespace Oro\Component\MessageQueue\Job;
 
-use Oro\Bundle\EntityBundle\ORM\Registry;
+use Doctrine\Persistence\ManagerRegistry;
 use Oro\Component\MessageQueue\Checker\JobStatusChecker;
 use Oro\Component\MessageQueue\Client\Message;
 use Oro\Component\MessageQueue\Client\MessagePriority;
@@ -19,14 +19,14 @@ class RootJobStatusCalculator implements RootJobStatusCalculatorInterface
     private JobStatusChecker $jobStatusChecker;
     private StatusCalculatorResolver $statusCalculatorResolver;
     private MessageProducerInterface $messageProducer;
-    private Registry $registry;
+    private ManagerRegistry $registry;
 
     public function __construct(
         JobManagerInterface $jobManager,
         JobStatusChecker $jobStatusChecker,
         StatusCalculatorResolver $statusCalculatorResolver,
         MessageProducerInterface $messageProducer,
-        Registry $registry
+        ManagerRegistry $registry
     ) {
         $this->jobManager = $jobManager;
         $this->jobStatusChecker = $jobStatusChecker;

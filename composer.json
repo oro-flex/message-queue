@@ -1,0 +1,40 @@
+{
+    "name": "oro-flex/message-queue",
+    "description": "The component incorporates a message queue in your application via different transports.",
+    "homepage": "https://github.com/oroinc/platform/tree/master/src/Oro/Component/MessageQueue",
+    "license": "MIT",
+    "authors": [
+	    {
+            "name": "Nikita Makarov",
+            "email": "mesaverde228@gmail.com"
+        },
+        {
+            "name": "Oro, Inc",
+            "homepage": "https://oroinc.com/"
+        }
+    ],
+    "require": {
+        "php": "~7.4.14 || ~8.0.0"
+    },
+    "require-dev": {
+    },
+    "conflict": {
+        "oro/platform": "*"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "extra": {
+        "symfony": {
+            "require": "5.4.*"
+        },
+        "branch-alias": {
+            "dev-master": "5.0-dev"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Oro\\Component\\MessageQueue\\": ""
+        },
+        "exclude-from-classmap": ["/Tests/"]
+    }
+}
